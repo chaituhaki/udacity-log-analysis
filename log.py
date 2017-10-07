@@ -26,6 +26,7 @@ def execute_query(query):
     db.close()
     return result_Set
 
+
 # print query 1 results
 def article_query(result):
     for i in range(len(result)):
@@ -33,12 +34,14 @@ def article_query(result):
         view = result[i][1]
         print("%s---> %i views" % (title, view))
 
+
 # print query 2 results
 def author_query(result):
     for i in range(len(result)):
         title = result[i][0]
         view = result[i][1]
         print("%s---> %i views" % (title, view))
+
 
 # print query 3 results
 def error_query(result):
@@ -51,7 +54,7 @@ if __name__ == "__main__":
     # calls execute_query method to execute the query
     result = execute_query(query_One)
     print("The 3 most popular articles of all time are:\n")
-    # calls article_query method to execute the query
+    # calls article_query method to print the result
     article_query(result)
     print("\n")
 
