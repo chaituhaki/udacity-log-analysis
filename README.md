@@ -10,7 +10,7 @@
 * Download the [udacity-log-analysis-master.zip](https://github.com/chaituhaki/udacity-log-analysis/archive/master.zip).
 * Download [newsdata.sql](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip) file.
 
-##Project Setup
+## Project Setup
 1. Install vagrant and VirtualBox.
 2. Unzip _udacity-log-analysis-master.zip_ file.
 3. Unzip _newsdata.zip_ file.
@@ -30,9 +30,8 @@
 10. Now change directory to _udacity-log-analysis-master_ directory.
 11. After chaning directory, use command **$python log.py** to run the log.py.
 
-##Create Views
-
-###Create popular_view using:
+## Create Views
+### Create popular_view using:
 ```
 create view popular_view as 
     select a.id, a.name, n.title, count(l.path) 
@@ -41,8 +40,7 @@ create view popular_view as
     group by a.id, a.name, n.title, l.path 
     order by count desc;
 ```
-
-###Create error_view using:
+### Create error_view using:
 ```
 create view error_view as 
     select date(time) as date,round(100.0*sum(case l.status when '200 OK' 
