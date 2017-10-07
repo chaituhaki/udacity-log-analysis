@@ -31,6 +31,7 @@
 11. After chaning directory, use command **$python log.py** to run the log.py.
 
 ##Create Views
+
 ###Create popular_view using:
 ```
 create view popular_view as 
@@ -40,6 +41,7 @@ create view popular_view as
     group by a.id, a.name, n.title, l.path 
     order by count desc;
 ```
+
 ###Create error_view using:
 ```
 create view error_view as 
